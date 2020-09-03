@@ -13,6 +13,7 @@ import Echarts from 'echarts'
 Vue.prototype.$echarts = Echarts
 
 
+
 // vant
 // import Vant from 'vant';
 // import 'vant/lib/index.css';
@@ -21,13 +22,12 @@ Vue.prototype.$echarts = Echarts
 
 
 // element-ui
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+// import ElementUI from 'element-ui';
+// import 'element-ui/lib/theme-chalk/index.css';
 
-Vue.use(ElementUI);
+// Vue.use(ElementUI);
 
-// 消息提示的环境配置，是否为生产环境： // false 开发环境：Vue会提供很多警告来方便调试代码。 // true 生产环境：警告却没有用，反而会增加应用的体积
-Vue.config.productionTip = process.env.NODE_ENV == "production";
+
 // // 请求拦截器
 // axios.interceptors.request.use(
 //   config => {
