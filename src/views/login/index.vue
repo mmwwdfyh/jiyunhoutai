@@ -10,7 +10,7 @@
           <el-input type="password" v-model="form.pass"></el-input>
         </el-form-item>
 
-        <el-form-item>
+        <el-form-item style="margin-left:0px;">
           <el-button type="primary" @click="submitForm('form')">立即登录</el-button>
         </el-form-item>
       </el-form>
@@ -53,7 +53,7 @@ export default {
             if (code == 200) {
               //获取token
               let token = res.data.data.token;
-              console.log(token)
+              console.log(token);
               //吧token存储到本地
               localStorage.setItem("jy_token", token);
               //2获取用户信息
@@ -62,10 +62,24 @@ export default {
                 // console.log(resp)
                 if (resp.data.code == 200) {
                   //将获取到的用户信息保存到本地
-                  localStorage.setItem("jy_info", JSON.stringify(resp.data.data));
+                  localStorage.setItem(
+                    "jy_info",
+                    JSON.stringify(resp.data.data)
+                  );
                   //跳转到首页
                   this.$router.push("/");
+                } else {
+                  // 获取信息失败, 弹出警告
+                  this.$message({
+                    message: resp.message,
+                    type: "warning"
+                  });
                 }
+              });
+            } else {
+              this.$message({
+                message: res.message,
+                type: "warning"
               });
             }
           });
@@ -84,6 +98,7 @@ export default {
   width: 100%;
   height: 100%;
   background: url("http://mengxuegu.com:9999/img/login.b665435f.jpg");
+  background-size: 100% 100%;
   position: absolute;
 }
 .login_deng {
@@ -94,7 +109,17 @@ export default {
   margin: 150px auto;
   padding: 30px 50px 30px 30px;
 }
-.el-form-item{
+.el-form-item {
   margin-bottom: 50px;
+  .el-form-item__content {
+    margin-left: 0px;
+  }
 }
+h1 {
+  text-align: center;
+}
+.el-form {
+  text-align: center;
+}
+
 </style>
