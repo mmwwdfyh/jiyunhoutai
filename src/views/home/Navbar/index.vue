@@ -28,6 +28,19 @@
           <i class="el-icon-user"></i>
           <span slot="title">员工管理</span>
         </el-menu-item>
+        <el-submenu index="1">
+          <template slot="title">
+            <i class="el-icon-folder"></i>
+            <span>数据管理</span>
+          </template>
+          <el-menu-item-group>
+            <el-menu-item index="/yonghu">用户列表</el-menu-item>
+            <el-menu-item index="/shanjia">商家列表</el-menu-item>
+            <el-menu-item index="/shipin">食品列表</el-menu-item>
+            <el-menu-item index="/dingdan">订单列表</el-menu-item>
+            <el-menu-item index="guanli">管理员列表</el-menu-item>
+          </el-menu-item-group>
+        </el-submenu>
       </el-menu>
     </el-aside>
   </div>
@@ -53,5 +66,8 @@ export default {
   left: 0;
   bottom: 0;
   overflow-y: auto;
+}
+.el-submenu{
+  overflow: hidden;
 }
 </style>

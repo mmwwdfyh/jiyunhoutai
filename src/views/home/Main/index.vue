@@ -24,12 +24,12 @@ export default {
 .el-main {
   //   background-color: #e9eef3;
   position: absolute;
-  top: 50px;
+  top: 70px;
   left: 230px;
   right: 0px;
   bottom: 0px;
   padding: 10px;
-  overflow-y: auto;
+  // overflow-y: auto;
   //   text-align: center;
 }
 .el-breadcrumb {

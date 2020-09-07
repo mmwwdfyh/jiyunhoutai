@@ -100,6 +100,50 @@ export default new Router({
             title: "员工管理"
           },
         },
+        {
+          path: "/yonghu",
+          name: "yonghu",
+          // route level code-splitting
+          // this generates a separate chunk (about.[hash].js) for this route
+          // which is lazy-loaded when the route is visited.
+          component: () => import(/* webpackChunkName: "about" */ './components/guan/yonghu.vue'),
+          // meta: {
+          //   title: "员工管理"
+          // },
+        },
+        {
+          path: "/shanjia",
+          name: "shanjia",
+          // route level code-splitting
+          // this generates a separate chunk (about.[hash].js) for this route
+          // which is lazy-loaded when the route is visited.
+          component: () => import(/* webpackChunkName: "about" */ './components/guan/shanjia.vue'),
+          // meta: {
+          //   title: "员工管理"
+          // },
+        },
+        {
+          path: "/shipin",
+          name: "shipin",
+          // route level code-splitting
+          // this generates a separate chunk (about.[hash].js) for this route
+          // which is lazy-loaded when the route is visited.
+          component: () => import(/* webpackChunkName: "about" */ './components/guan/shipin.vue'),
+          // meta: {
+          //   title: "员工管理"
+          // },
+        },
+        {
+          path: "/dingdan",
+          name: "dingdan",
+          // route level code-splitting
+          // this generates a separate chunk (about.[hash].js) for this route
+          // which is lazy-loaded when the route is visited.
+          component: () => import(/* webpackChunkName: "about" */ './components/guan/dingdan.vue'),
+          // meta: {
+          //   title: "员工管理"
+          // },
+        },
       ]
     },
 
