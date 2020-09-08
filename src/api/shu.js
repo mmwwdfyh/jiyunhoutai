@@ -24,11 +24,24 @@ export default {
             method: "post"
         })
     },
+    // 真实模拟数据
+    // solid(page, pageSize) {
+    //     return axios({
+    //         url: "http://mengxuegu.com:7300/mock/5f50b5d58d90085e5b5840a4/jy/zhenyuan",
+    //         // url:"http://120.53.31.103:84/api/user",
+    //         method: "get",
+    //         params: {
+    //             page,
+    //             pageSize
+    //         }
+    //     })
+    // },
     // 分页
-    fenye(page, size) {
+    fenye(page, size, searchMap) {
         return axios({
             url: `/huiyuan/${page}/${size}`,
-            method: "post"
+            method: "post",
+            data: searchMap
         })
     },
     //获取列表数据

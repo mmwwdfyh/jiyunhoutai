@@ -121,5 +121,4 @@ h1 {
 .el-form {
   text-align: center;
 }
-
 </style>
