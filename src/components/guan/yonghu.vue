@@ -37,6 +37,7 @@ export default {
     handleCurrentPage(data) {
       console.log(data);
       this.offset = (data - 1) * this.pageSize;
+      console.log(this.offset);
       this.user();
     },
     user() {

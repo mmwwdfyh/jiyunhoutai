@@ -10,7 +10,9 @@ import Echarts from 'echarts'
 
 
 // Echarts
-Vue.prototype.$echarts = Echarts
+// Vue.prototype.$echarts = Echarts
+
+import "./permission"
 
 
 // vant
